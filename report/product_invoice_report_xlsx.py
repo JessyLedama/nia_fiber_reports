@@ -19,7 +19,7 @@ class ProductInvoiceXlsx(models.AbstractModel):
         row = 0
         col = 0
                         
-        sheet.write(row, col, 'Number', bold)
+        sheet.write(row, col, 'Invoice Number', bold)
 
         col += 1
         sheet.write(row, col, 'Date', bold)

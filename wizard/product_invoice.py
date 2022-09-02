@@ -43,7 +43,7 @@ class ProductInvoice(models.TransientModel):
 
     # Excel Report
     def check_excel_report(self):
-        products = self.env['account.move.line'].search_read([('journal_id', '=', 2)]) # journal_id 2 = Vendor Bills.
+        products = self.env['account.move.line'].search_read([('journal_id', '=', 1)]) # journal_id 1 = Customer Invoices.
 
         data = {
             'products': products,
