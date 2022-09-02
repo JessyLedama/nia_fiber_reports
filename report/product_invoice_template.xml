@@ -30,6 +30,7 @@
                         <th>Product Description</th>
                         <th>Quantity</th>
                         <!-- <th>Unit Of Measure</th> -->
+                        <th>Journal Id</th>
                         <th>Unit Price</th>
                     </tr>
                 </thead>
@@ -42,6 +43,7 @@
                             <td><span t-field="product.partner_id"/></td>
                             <td><span t-field="product.product_id"/></td>
                             <td><span t-field="product.quantity"/></td>
+                            <td><span t-field="product.journal_id"/></td>
                             <!-- <td><span t-field="product.product_uom_id"/></td> -->
                             <td><span t-field="product.price_unit"/></td>
                         </tr>                                

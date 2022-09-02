@@ -38,7 +38,7 @@ class ProductInvoice(models.TransientModel):
 
     def _print_report(self, data):
         data['form'].update(self.read(['start_date', 'end_date'])[0])
-        return self.env.ref('product_invoice_report.action_product_invoice').report_action(self, data=data, config=False)
+        return self.env.ref('nia_fiber_reports.action_product_invoice').report_action(self, data=data, config=False)
 
 
     # Excel Report
@@ -53,5 +53,5 @@ class ProductInvoice(models.TransientModel):
         return self.print_excel_report(data)
 
     def print_excel_report(self, data):
-        return self.env.ref('product_invoice_report.action_product_invoice_xlsx').report_action(self, data=data, config=False)
+        return self.env.ref('nia_fiber_reports.action_product_invoice_xlsx').report_action(self, data=data, config=False)
         

@@ -20,7 +20,7 @@
 #################################################################################
 
 {
-    'name': "Product Invoice Report",
+    'name': "Nia Fiber Reports",
     'author': 'SIMI Technologies',
     'category': 'account_invoicing',
     'summary': """Report for customer's outstanding invoice amount within the particular date period""",

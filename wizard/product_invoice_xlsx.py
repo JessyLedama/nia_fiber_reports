@@ -38,6 +38,6 @@ class ProductInvoiceXlsx(models.TransientModel):
 
     def _print_report_xlsx(self, data):
         data['form'].update(self.read(['start_date', 'end_date'])[0])
-        return self.env.ref('product_invoice_report.action_product_invoice_xlsx').report_action(self, data=data, config=False)
+        return self.env.ref('nia_fiber_reports.action_product_invoice_xlsx').report_action(self, data=data, config=False)
 
 
