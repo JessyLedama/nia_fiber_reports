@@ -64,7 +64,7 @@ class ProductInvoiceXlsx(models.AbstractModel):
                 sheet.write(row, col - 1, obj['price_total'])
                 sheet.write(row, col, obj['journal_id'][1])
                 # if(obj['journal_id'][0] == 2):
-                print("data date:", obj['journal_id'][1])
+                print("data date:", obj['journal_id'])
 
 
         
