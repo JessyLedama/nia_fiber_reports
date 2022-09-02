@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <!-- Top menu item -->
-    <menuitem name="Nia Reports"
-        id="menu_nia_root"
-        web_icon="nia_fiber_reports,static/description/icon.png"
+    <menuitem 
+        name="Nia Reports" 
+        id="menu_nia_root" 
+        web_icon="nia_fiber_reports,static/description/icon.png" 
         sequence="135"/>
 
-    <menuitem id="menu_nia_reports" name="Nia Fiber Reports"
-        parent="menu_nia_root" sequence="1" />
+    <menuitem 
+        id="menu_nia_reports" 
+        name="Nia Fiber Reports" 
+        parent="menu_nia_root" 
+        sequence="1"/>
         
-    <!-- Create menu to open wizard for report-->
-    <menuitem
-        id="menu_product_invoice_report"
-        name="Products Sales Invoice Report"
-        parent="menu_nia_reports"
-        sequence="6"
-        action="nia_fiber_reports.open_product_invoice_action"
-    />
+    <!-- Product Invoice Report-->
+    <menuitem 
+        id="menu_product_invoice_report" 
+        name="Products Sales Invoice Report" 
+        parent="menu_nia_reports" 
+        sequence="6" 
+        action="nia_fiber_reports.open_product_invoice_action"/>
+    
+    <!-- Inventory Aging Report -->
+    <menuitem 
+        id="menu_inventory_aging_report" 
+        name="Inventory Aging Report" 
+        parent="menu_nia_reports" 
+        action="nia_fiber_reports.open_inventory_aging_report_action"/>
 </odoo>

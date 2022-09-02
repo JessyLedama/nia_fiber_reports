@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- <record id="action_inventory_aging_report" model="ir.actions.report">
+            <field name="name">Print Inventory Aging Report</field>
+            <field name="model">report.product_invoice_report.product_invoice</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">product_invoice_report.product_invoice</field>
+            <field name="report_file">product_invoice_report.product_invoice</field>
+        </record> -->
+
+        <record id="action_inventory_aging_report_xlsx" model="ir.actions.report">
+            <field name="name">Inventory Aging Report</field>
+            <field name="model">report.inventory_aging_report.inventory_aging_report_xlsx</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">inventory_aging_report.inventory_aging_report_xlsx</field>
+            <field name="report_file">inventory_aging_report.inventory_aging_report_xlsx</field>
+        </record>
+    </data>
+</odoo>

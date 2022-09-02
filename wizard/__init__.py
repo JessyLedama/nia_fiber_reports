@@ -21,5 +21,6 @@
 
 from. import product_invoice
 from . import product_invoice_xlsx
+from . import inventory_aging_wizard
 
 

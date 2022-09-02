@@ -20,3 +20,4 @@
 #################################################################################
 from . import invoice_report
 from . import product_invoice_report_xlsx
+from . import inventory_aging_report_xlsx
