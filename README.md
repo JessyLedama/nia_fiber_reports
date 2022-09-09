@@ -15,12 +15,16 @@ This is a report of all the products in customer invoices between selected dates
 
 Inventory Aging Report
 --------
-This is an aging report of all the products in inventory from selected date using selected period.
+This is an aging report of all the products in Inventory from selected date using selected period.
 
 Draft PO Report
 --------
-This is an aging report of all the products in draft PO from selected date using selected period.
+This is an aging report of all the products in Draft Purchase Order from selected date using selected period.
 
 Draft SO Report
 --------
-This is an aging report of all the products in draft SO from selected date using selected period.
+This is an aging report of all the products in Draft Sale Order from selected date using selected period.
+
+Vendor Bills Report
+--------
+This is an aging report of all the products in Vendor Bills from selected date using selected period.
