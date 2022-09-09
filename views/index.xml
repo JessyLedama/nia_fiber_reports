@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- note Stage Tree View -->
+    <record id="view_nia_reports_index_tree" model="ir.ui.view">
+      <field name="name">note.stage.tree</field>
+      <field name="model">note.stage</field>
+      <field name="field_parent"></field>
+      <field name="arch" type="xml">
+        <tree string="Stages of Notes" editable="bottom">
+            <field name="sequence" widget="handle"/>
+            <field name="name"/>
+            <field name="fold"/>
+        </tree>
+      </field>
+    </record>
+
+    <!--Open the wizard on click of menu-->
+    <record id="open_nia_reports_index_action" model="ir.actions.act_window">
+        <field name="name">Select Due Date to print Products in Invoices</field>
+        <field name="res_model">product.invoice</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="view_product_invoice_form"/>
+    </record> 
+</odoo>

@@ -27,4 +27,11 @@
         name="Inventory Aging Report" 
         parent="menu_nia_reports" 
         action="nia_fiber_reports.open_inventory_aging_report_action"/>
+
+    <!-- Draft PO Report -->
+    <menuitem 
+        id="menu_draft_po_report" 
+        name="Draft PO Report" 
+        parent="menu_nia_reports" 
+        action="nia_fiber_reports.open_draft_po_report_action"/>
 </odoo>
