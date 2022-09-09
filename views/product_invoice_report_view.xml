@@ -13,10 +13,18 @@
         parent="menu_nia_root" 
         sequence="1"/>
         
-    <!-- Product Invoice Report-->
+    <!-- Sales Invoice Report-->
     <menuitem 
         id="menu_product_invoice_report" 
-        name="Products Sales Invoice Report" 
+        name="Sales Invoice Report" 
+        parent="menu_nia_reports" 
+        sequence="6" 
+        action="nia_fiber_reports.open_product_invoice_action"/>
+
+    <!-- Purchase Bills Report-->
+    <menuitem 
+        id="menu_product_invoice_report" 
+        name="Purchase Invoice Report" 
         parent="menu_nia_reports" 
         sequence="6" 
         action="nia_fiber_reports.open_product_invoice_action"/>
@@ -34,4 +42,11 @@
         name="Draft PO Report" 
         parent="menu_nia_reports" 
         action="nia_fiber_reports.open_draft_po_report_action"/>
+
+    <!-- Draft SO Report -->
+    <menuitem 
+        id="menu_draft_so_report" 
+        name="Draft SO Report" 
+        parent="menu_nia_reports" 
+        action="nia_fiber_reports.open_draft_so_report_action"/>
 </odoo>
