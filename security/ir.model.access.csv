@@ -4,3 +4,5 @@ access_product_invoice,access_product_invoice,model_product_invoice,base.group_u
 access_inventory_aging_report,access_inventory_aging_report,model_inventory_aging_report,base.group_user,1,1,1,1
 access_draft_po_report,access_draft_po_report,model_draft_po_report,base.group_user,1,1,1,1
 access_draft_so_report,access_draft_so_report,model_draft_so_report,base.group_user,1,1,1,1
+access_purchase_invoice,access_purchase_invoice,model_purchase_invoice,base.group_user,1,1,1,1
+

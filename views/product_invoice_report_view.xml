@@ -21,13 +21,13 @@
         sequence="6" 
         action="nia_fiber_reports.open_product_invoice_action"/>
 
-    <!-- Purchase Bills Report-->
+    <!-- Vendor Bills Report-->
     <menuitem 
-        id="menu_product_invoice_report" 
-        name="Purchase Invoice Report" 
+        id="menu_purchase_invoice_report" 
+        name="Vendor Bills Report" 
         parent="menu_nia_reports" 
         sequence="6" 
-        action="nia_fiber_reports.open_product_invoice_action"/>
+        action="nia_fiber_reports.open_purchase_invoice_action"/>
     
     <!-- Inventory Aging Report -->
     <menuitem 

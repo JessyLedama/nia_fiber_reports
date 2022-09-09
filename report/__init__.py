@@ -23,3 +23,4 @@ from . import product_invoice_report_xlsx
 from . import inventory_aging_report_xlsx
 from . import draft_po_report_xlsx
 from . import draft_so_report_xlsx
+from . import purchase_invoice_report_xlsx
