@@ -25,12 +25,11 @@ from pickle import TRUE
 from sqlalchemy import true
 from odoo import api, fields, models, _
 
-class StockQuantityReport(models.TransientModel):
-    _name = "stock.quantity.report"
-    _description = "Stock Quantity Report"
+class StockQuantityPerWarehouseReport(models.TransientModel):
+    _name = "stock.quantity.per.warehouse.report"
+    _description = "Stock Quantity Per Warehouse Report"
 
-    # start_date = fields.Date(string='Starting Date', required='1', help='Select start date')
-    # end_date = fields.Date(string='Ending Date', required='1', help='Select eding date')
+    warehouse_id = fields.Many2one('stock.location', string="Warehouse")
     total_amount_due = fields.Integer(string='Total Amount Due')
 
 
@@ -47,14 +46,16 @@ class StockQuantityReport(models.TransientModel):
 
     # Excel Report
     def check_excel_report(self):
-        products = self.env['product.template'].search_read([('active', '=', TRUE)]) 
+        warehouseId = self.read(['warehouse_id'])[0]
+        products = self.env['stock.quant'].search_read([('location_id', '=', 8)]) 
 
         data = {
+            'location': warehouseId,
             'products': products,
         }
 
-        return self.print_excel_report(data)
+        return self.print_excel_report(data,)
 
     def print_excel_report(self, data):
-        return self.env.ref('nia_fiber_reports.action_stock_quantity_report_xlsx').report_action(self, data=data, config=False)
+        return self.env.ref('nia_fiber_reports.action_stock_quantity_per_warehouse_report_xlsx').report_action(self, data=data, config=False)
         

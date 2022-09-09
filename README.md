@@ -28,3 +28,11 @@ This is an aging report of all the products in Draft Sale Order from selected da
 Vendor Bills Report
 --------
 This is an aging report of all the products in Vendor Bills from selected date using selected period.
+
+Stock Quantity Report
+--------
+This is an aging report of all the products with stock in Inventory, with their value.
+
+Stock Quantity Per Warehouse Report
+--------
+This is an aging report of all the products with stock in Inventory per Warehouse, with their value.
