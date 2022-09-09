@@ -36,3 +36,7 @@ This is an aging report of all the products with stock in Inventory, with their 
 Stock Quantity Per Warehouse Report
 --------
 This is an aging report of all the products with stock in Inventory per Warehouse, with their value.
+
+Stock Adjustment Report
+--------
+This is a report of all  stock adjustments in a given period.

@@ -63,4 +63,11 @@
         name="Stock Quantity Per Warehouse Report" 
         parent="menu_nia_reports" 
         action="nia_fiber_reports.open_stock_quantity_per_warehouse_report_action"/>    
+
+    <!-- Stock Adjustments Report -->
+    <menuitem 
+        id="menu_stock_adjustment_report" 
+        name="Stock Adjustment Report" 
+        parent="menu_nia_reports" 
+        action="nia_fiber_reports.open_stock_adjustment_report_action"/>    
 </odoo>

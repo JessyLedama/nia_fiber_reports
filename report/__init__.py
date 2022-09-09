@@ -26,3 +26,4 @@ from . import draft_so_report_xlsx
 from . import purchase_invoice_report_xlsx
 from . import stock_quantity_report_xlsx
 from . import stock_quantity_per_warehouse_report_xlsx
+from . import stock_adjustment_report_xlsx

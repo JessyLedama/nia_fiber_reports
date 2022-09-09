@@ -27,3 +27,4 @@ from . import draft_po_wizard
 from . import draft_so_wizard
 from . import stock_quantity_wizard
 from . import stock_quantity_per_warehouse_wizard
+from . import stock_adjustment_wizard
