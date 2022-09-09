@@ -25,5 +25,5 @@ from . import product_invoice_xlsx
 from . import inventory_aging_wizard
 from . import draft_po_wizard
 from . import draft_so_wizard
-
+from . import stock_quantity_wizard
 

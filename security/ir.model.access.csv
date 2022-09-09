@@ -5,4 +5,6 @@ access_inventory_aging_report,access_inventory_aging_report,model_inventory_agin
 access_draft_po_report,access_draft_po_report,model_draft_po_report,base.group_user,1,1,1,1
 access_draft_so_report,access_draft_so_report,model_draft_so_report,base.group_user,1,1,1,1
 access_purchase_invoice,access_purchase_invoice,model_purchase_invoice,base.group_user,1,1,1,1
+access_stock_quantity_report,access_stock_quantity_report,model_stock_quantity_report,base.group_user,1,1,1,1
+
 

@@ -49,4 +49,11 @@
         name="Draft SO Report" 
         parent="menu_nia_reports" 
         action="nia_fiber_reports.open_draft_so_report_action"/>
+
+    <!-- Stock Quantity Report -->
+    <menuitem 
+        id="menu_stock_quantity_report" 
+        name="Stock Quantity Report" 
+        parent="menu_nia_reports" 
+        action="nia_fiber_reports.open_stock_quantity_report_action"/>    
 </odoo>

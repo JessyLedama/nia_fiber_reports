@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- <record id="action_draft_po" model="ir.actions.report">
+            <field name="name">Print Draft PO</field>
+            <field name="model">report.draft_po_report.draft_po_xlsx</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">product_invoice_report.product_invoice</field>
+            <field name="report_file">product_invoice_report.product_invoice</field>
+        </record> -->
+
+        <record id="action_stock_quantity_report_xlsx" model="ir.actions.report">
+            <field name="name">Stock Quantity Xlsx Report</field>
+            <field name="model">report.stock_quantity_report.stock_quantity_xlsx</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">stock_quantity_report.stock_quantity_xlsx</field>
+            <field name="report_file">stock_quantity_report.stock_quantity_xlsx</field>
+        </record>
+    </data>
+</odoo>
