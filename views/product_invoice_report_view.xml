@@ -57,7 +57,7 @@
         parent="menu_nia_reports" 
         action="nia_fiber_reports.open_stock_quantity_report_action"/>
 
-    <!-- Stock Quantity Report -->
+    <!-- Stock Quantity Per Warehouse Report -->
     <menuitem 
         id="menu_stock_quantity_per_warehouse_report" 
         name="Stock Quantity Per Warehouse Report" 

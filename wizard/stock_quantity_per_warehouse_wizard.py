@@ -46,8 +46,8 @@ class StockQuantityPerWarehouseReport(models.TransientModel):
 
     # Excel Report
     def check_excel_report(self):
-        warehouseId = self.read(['warehouse_id'])[0]
-        products = self.env['stock.quant'].search_read([('location_id', '=', 8)]) 
+        warehouseId = self.read(['warehouse_id'])
+        products = self.env['stock.quant'].search_read()
 
         data = {
             'location': warehouseId,
