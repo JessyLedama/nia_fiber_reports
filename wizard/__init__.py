@@ -28,3 +28,4 @@ from . import draft_so_wizard
 from . import stock_quantity_wizard
 from . import stock_quantity_per_warehouse_wizard
 from . import stock_adjustment_wizard
+from . import chart_of_accounts_wizard

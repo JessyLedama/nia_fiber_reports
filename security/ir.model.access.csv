@@ -16,4 +16,6 @@ access_stock_quantity_per_warehouse_report,access_stock_quantity_per_warehouse_r
 
 access_stock_adjustment_report,access_stock_adjustment_report,model_stock_adjustment_report,base.group_user,1,1,1,1
 
+access_chart_of_accounts_report,access_chart_of_accounts_report,model_chart_of_accounts_report,base.group_user,1,1,1,1
+
 
