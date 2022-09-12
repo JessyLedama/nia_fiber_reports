@@ -10,7 +10,7 @@
         </record> -->
 
         <record id="action_stock_adjustment_report_xlsx" model="ir.actions.report">
-            <field name="name">Print Stock Adjustment Report</field>
+            <field name="name">Stock Adjustment Report</field>
             <field name="model">report.stock_adjustment_report.stock_adjustment_xlsx</field>
             <field name="report_type">xlsx</field>
             <field name="report_name">stock_adjustment_report.stock_adjustment_xlsx</field>
