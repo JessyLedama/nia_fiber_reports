@@ -43,19 +43,20 @@ class StockAdjustmentReportXlsx(models.AbstractModel):
         for obj in data['products']:  
                        
             # if(data['start_date'][0]['start_date'] <= obj['create_date'] and data['end_date'][0]['end_date'] >= obj['create_date']):
-            locations = self.env['stock.location'].search_read([(('usage', 'not in', ['virual']))])
+            if(obj['quantity'] >= 0):
+                locations = self.env['stock.location'].search_read([(('usage', 'not in', ['virual']))])
 
-            row += 1 
-            
-            sheet.write(row, col - 6, obj['location_id'][1])
-            sheet.write(row, col - 5, obj['product_id'][1])
-            sheet.write(row, col - 4, obj['quantity'])
-            sheet.write(row, col - 3, obj['product_uom_id'][1])
-            sheet.write(row, col - 2, obj['inventory_quantity'])
-            sheet.write(row, col - 1, obj['inventory_diff_quantity'])
-            sheet.write(row, col, obj['create_date'])
-            
-            print("data date:", locations[0]['complete_name'])
+                row += 1 
+                
+                sheet.write(row, col - 6, obj['location_id'][1])
+                sheet.write(row, col - 5, obj['product_id'][1])
+                sheet.write(row, col - 4, obj['quantity'])
+                sheet.write(row, col - 3, obj['product_uom_id'][1])
+                sheet.write(row, col - 2, obj['inventory_quantity'])
+                sheet.write(row, col - 1, obj['inventory_diff_quantity'])
+                sheet.write(row, col, obj['create_date'])
+                
+                # print("data date:", locations[0]['complete_name'])
 
 
         
