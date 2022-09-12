@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <!-- Top menu item -->
-    <menuitem 
+    <!-- <menuitem 
         name="Nia Reports" 
         id="menu_nia_root" 
         web_icon="nia_fiber_reports,static/description/icon.png" 
-        sequence="135"/>
+        sequence="135"/> -->
 
     <menuitem 
         id="menu_nia_reports" 
         name="Nia Fiber Reports" 
-        parent="menu_nia_root" 
+        parent="account.menu_finance_reports" 
         sequence="1"/>
         
     <!-- Sales Invoice Report-->
