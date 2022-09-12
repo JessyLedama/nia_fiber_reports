@@ -29,6 +29,9 @@ class StockQuantityReportXlsx(models.AbstractModel):
         sheet.write(row, col, 'Cost', bold)
 
         col += 1
+        sheet.write(row, col, 'Currency', bold)
+
+        col += 1
         sheet.write(row, col, 'Quantity On Hand', bold)
 
         col += 1
@@ -52,9 +55,10 @@ class StockQuantityReportXlsx(models.AbstractModel):
 
             row += 1 
             
-            sheet.write(row, col - 7, obj['name'])
-            sheet.write(row, col - 6, obj['list_price'])
-            sheet.write(row, col - 5, obj['standard_price'])
+            sheet.write(row, col - 8, obj['name'])
+            sheet.write(row, col - 7, obj['list_price'])
+            sheet.write(row, col - 6, obj['standard_price'])
+            sheet.write(row, col - 5, obj['currency_id'][1])
             sheet.write(row, col - 4, obj['qty_available'])
             sheet.write(row, col - 3, obj['virtual_available'])
             sheet.write(row, col - 2, obj['uom_id'][1])
