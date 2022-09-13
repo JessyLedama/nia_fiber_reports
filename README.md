@@ -40,3 +40,11 @@ This is an aging report of all the products with stock in Inventory per Warehous
 Stock Adjustment Report
 --------
 This is a report of all  stock adjustments in a given period.
+
+Chart Of Accounts Report
+--------
+This is a report of all  charts of accounts.
+
+General Ledger Report
+--------
+This is a report of the general ledger for a given period.

@@ -77,4 +77,11 @@
         name="Chart Of Accounts Report" 
         parent="menu_nia_reports" 
         action="nia_fiber_reports.open_chart_of_accounts_report_action"/>    
+
+    <!-- Chart Of Accounts Report -->
+    <menuitem 
+        id="menu_general_ledger_report" 
+        name="General Ledger Report" 
+        parent="menu_nia_reports" 
+        action="nia_fiber_reports.open_general_ledger_report_action"/>    
 </odoo>

@@ -18,4 +18,6 @@ access_stock_adjustment_report,access_stock_adjustment_report,model_stock_adjust
 
 access_chart_of_accounts_report,access_chart_of_accounts_report,model_chart_of_accounts_report,base.group_user,1,1,1,1
 
+access_general_ledger_report,access_general_ledger_report,model_general_ledger_report,base.group_user,1,1,1,1
+
 
