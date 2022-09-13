@@ -50,16 +50,18 @@ class VendorBillsXlsx(models.AbstractModel):
             row += 1  
             
             if(data['form_data']['start_date'] <= obj['date'] and data['form_data']['end_date'] >= obj['date']):
-                sheet.write(row, col - 8, obj['move_id'][1])
-                sheet.write(row, col - 7, obj['date'])
-                sheet.write(row, col - 6, obj['partner_id'][1])
-                sheet.write(row, col - 5, obj['name'])
-                sheet.write(row, col - 4, obj['quantity'])
-                sheet.write(row, col - 2, obj['price_unit'])
-                sheet.write(row, col - 1, obj['price_total'])
-                sheet.write(row, col, obj['journal_id'][1])
+                
+                if(obj['price_unit'] >= 0):
+                    sheet.write(row, col - 8, obj['move_id'][1])
+                    sheet.write(row, col - 7, obj['date'])
+                    sheet.write(row, col - 6, obj['partner_id'][1])
+                    sheet.write(row, col - 5, obj['name'])
+                    sheet.write(row, col - 4, obj['quantity'])
+                    sheet.write(row, col - 2, obj['price_unit'])
+                    sheet.write(row, col - 1, obj['price_total'])
+                    sheet.write(row, col, obj['journal_id'][1])
 
-                # print("data date:", obj['journal_id'])
+                    # print("data date:", obj['journal_id'])
 
 
         
