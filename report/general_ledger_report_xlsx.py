@@ -51,21 +51,21 @@ class GeneralLedgerReportXlsx(models.AbstractModel):
 
         for obj in data['products']:  
                        
-            # if(data['start_date'][0]['start_date'] <= obj['date'] and data['end_date'][0]['end_date'] >= obj['date']):
+            if(obj['date'] >= data['start_date'][0]['start_date']  and obj['date'] <= data['end_date'][0]['end_date']):
 
-            row += 1 
-            
-            sheet.write(row, col - 8, obj['date'])
-            sheet.write(row, col - 7, obj['move_id'][1])
-            sheet.write(row, col - 6, obj['name'])
-            sheet.write(row, col - 5, obj['amount_currency'])
-            sheet.write(row, col - 4, obj['debit'])
-            sheet.write(row, col - 3, obj['credit'])
-            sheet.write(row, col - 2, obj['balance'])
-            sheet.write(row, col - 1, obj['cumulated_balance'])
-            sheet.write(row, col, obj['matching_number'])
-            
-            # print("data date:", data)
+                row += 1 
+                
+                sheet.write(row, col - 8, obj['date'])
+                sheet.write(row, col - 7, obj['move_id'][1])
+                sheet.write(row, col - 6, obj['name'])
+                sheet.write(row, col - 5, obj['amount_currency'])
+                sheet.write(row, col - 4, obj['debit'])
+                sheet.write(row, col - 3, obj['credit'])
+                sheet.write(row, col - 2, obj['balance'])
+                sheet.write(row, col - 1, obj['cumulated_balance'])
+                sheet.write(row, col, obj['matching_number'])
+                
+                # print("data date:", data)
 
 
         
