@@ -3,8 +3,6 @@ from pickle import FALSE
 import time
 
 # from numpy import product
-
-from numpy import product
 from odoo import api, models
 from dateutil.parser import parse
 from odoo.exceptions import UserError
