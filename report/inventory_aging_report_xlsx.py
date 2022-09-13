@@ -2,7 +2,7 @@
 from pickle import FALSE
 import time
 
-from numpy import product
+# from numpy import product
 
 # from numpy import product
 from odoo import api, models
