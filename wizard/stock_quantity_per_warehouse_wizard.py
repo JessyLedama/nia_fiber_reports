@@ -22,7 +22,7 @@
 from email.policy import default
 from pickle import TRUE
 
-from sqlalchemy import true
+# from sqlalchemy import true
 from odoo import api, fields, models, _
 
 class StockQuantityPerWarehouseReport(models.TransientModel):
