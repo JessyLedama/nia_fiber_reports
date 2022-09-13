@@ -10,7 +10,7 @@
         </record> -->
 
         <record id="action_draft_so_report_xlsx" model="ir.actions.report">
-            <field name="name">Print Draft PO Report</field>
+            <field name="name">Draft SO Report</field>
             <field name="model">report.draft_so_report.draft_so_xlsx</field>
             <field name="report_type">xlsx</field>
             <field name="report_name">draft_so_report.draft_so_xlsx</field>
