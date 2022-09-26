@@ -31,3 +31,4 @@ from . import stock_adjustment_wizard
 from . import chart_of_accounts_wizard
 from . import general_ledger_wizard
 from . import products_in_transit_wizard
+from . import balance_sheet_wizard

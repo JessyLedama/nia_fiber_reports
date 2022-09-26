@@ -48,3 +48,11 @@ This is a report of all  charts of accounts.
 General Ledger Report
 --------
 This is a report of the general ledger for a given period.
+
+Products In Transit Report
+--------
+This is a report of the products in transit for a given period.
+
+Balance Sheet Report
+--------
+This is a report of the balance sheet for a given period.

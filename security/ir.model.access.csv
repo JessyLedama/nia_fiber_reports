@@ -20,4 +20,8 @@ access_chart_of_accounts_report,access_chart_of_accounts_report,model_chart_of_a
 
 access_general_ledger_report,access_general_ledger_report,model_general_ledger_report,base.group_user,1,1,1,1
 
+access_products_in_transit_report,access_products_in_transit_report,model_products_in_transit_report,base.group_user,1,1,1,1
+
+access_balance_sheet_report,access_balance_sheet_report,model_balance_sheet_report,base.group_user,1,1,1,1
+
 

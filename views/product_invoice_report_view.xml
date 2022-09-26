@@ -78,10 +78,24 @@
         parent="menu_nia_reports" 
         action="nia_fiber_reports.open_chart_of_accounts_report_action"/>    
 
-    <!-- Chart Of Accounts Report -->
+    <!-- General Ledger Report -->
     <menuitem 
         id="menu_general_ledger_report" 
         name="General Ledger Report" 
         parent="menu_nia_reports" 
         action="nia_fiber_reports.open_general_ledger_report_action"/>    
+
+    <!-- Products In Transit Report -->
+    <menuitem 
+        id="menu_products_in_transit_report" 
+        name="Products In Transit Report" 
+        parent="menu_nia_reports" 
+        action="nia_fiber_reports.open_products_in_transit_report_action"/> 
+
+    <!-- Balace Sheet Report -->
+    <menuitem 
+        id="menu_balance_sheet_report" 
+        name="Balance Sheet Report" 
+        parent="menu_nia_reports" 
+        action="nia_fiber_reports.open_balance_sheet_report_action"/>   
 </odoo>

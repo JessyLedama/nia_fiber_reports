@@ -30,3 +30,4 @@ from . import stock_adjustment_report_xlsx
 from . import chart_of_accounts_report_xlsx
 from . import general_ledger_report_xlsx
 from . import products_in_transit_report_xlsx
+from . import balance_sheet_report_xlsx
