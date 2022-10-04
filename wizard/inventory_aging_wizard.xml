@@ -19,6 +19,9 @@
                       <group>
                         <field name="limit" />
                       </group>
+                      <group>
+                        <field name="selection" />
+                      </group>
                     </group>
                   
                     <footer>

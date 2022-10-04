@@ -29,6 +29,9 @@ class InventoryAgingReport(models.TransientModel):
     start_date = fields.Date(string='Starting Date', required='1', help='Select start date')
     period = fields.Integer(string='Period Length (Days)', required='1', help='Enter a period length.', default=30)
     limit = fields.Integer(string='Limit (Days)', required='1', help='Enter a limit.This is the maximum number of days that should be computed.', default=150)
+
+    selection = fields.Selection([('payable', 'Payable Accounts'), ('receivable', 'Receivable Accounts'), ('all', 'All Accounts')], string="Account", required='1')
+
     total_amount_due = fields.Integer(string='Total Amount Due')
 
 
@@ -46,10 +49,20 @@ class InventoryAgingReport(models.TransientModel):
     # Excel Report
     def check_excel_report(self):
         startDate = self.read(['start_date'])[0]
-        products = self.env['account.move.line'].search_read([('date', '=', startDate['start_date'])]) 
+        selection = self.read(['selection'])[0]
+        
+        if(selection['selection'] == 'payable'):
+            products = self.env['account.move'].search_read([('invoice_date_due', '<=', startDate['start_date']), ('journal_id', '=', 'Vendor Bills')]) 
+
+        elif(selection['selection'] == 'receivable'):
+            products = self.env['account.move'].search_read([('invoice_date_due', '<=', startDate['start_date']), ('journal_id', '=', 'Customer Invoices')]) 
+
+        else:
+            products = self.env['account.move'].search_read([('invoice_date_due', '<=', startDate['start_date'])]) 
 
         data = {
             'products': products,
+            'selection': selection,
             'form_data': self.read(['start_date', 'period', 'limit'])[0]
         }
 
