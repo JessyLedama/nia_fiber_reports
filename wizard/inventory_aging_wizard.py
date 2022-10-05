@@ -52,13 +52,13 @@ class InventoryAgingReport(models.TransientModel):
         selection = self.read(['selection'])[0]
         
         if(selection['selection'] == 'payable'):
-            products = self.env['account.move'].search_read([('invoice_date_due', '<=', startDate['start_date']), ('journal_id', '=', 'Vendor Bills')]) 
+            products = self.env['account.move'].search_read([('invoice_date_due', '<=', startDate['start_date']), ('journal_id', '=', 'Vendor Bills'), ('state', '=', 'posted')]) 
 
         elif(selection['selection'] == 'receivable'):
-            products = self.env['account.move'].search_read([('invoice_date_due', '<=', startDate['start_date']), ('journal_id', '=', 'Customer Invoices')]) 
+            products = self.env['account.move'].search_read([('invoice_date_due', '<=', startDate['start_date']), ('journal_id', '=', 'Customer Invoices'), ('state', '=', 'posted')]) 
 
         else:
-            products = self.env['account.move'].search_read([('invoice_date_due', '<=', startDate['start_date'])]) 
+            products = self.env['account.move'].search_read([('invoice_date_due', '<=', startDate['start_date']), ('state', '=', 'posted')]) 
 
         data = {
             'products': products,

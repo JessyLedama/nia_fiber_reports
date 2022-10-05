@@ -19,6 +19,7 @@ class AgingReportXlsx(models.AbstractModel):
         period = data['form_data']['period']
         increment = data['form_data']['period']
         limit = data['form_data']['limit']
+        days = 'days'
         
         bold = workbook.add_format({'bold':True})
         sheet=workbook.add_worksheet('Inventory Aging Report')
@@ -63,16 +64,16 @@ class AgingReportXlsx(models.AbstractModel):
                 sheet.write(row, col - 5, obj['amount_total_signed'])
             elif(dateDiff.days <= 30):
                 sheet.write(row, col - 4, obj['amount_total_signed'])
-            elif(dateDiff.days <= 60 and dateDiff.days > 30):
+            elif(dateDiff.days > 30 and dateDiff.days <= 60):
                 sheet.write(row, col - 3, obj['amount_total_signed'])
-            elif(dateDiff.days <= 90 and dateDiff.days > 60):
+            elif(dateDiff.days > 60 and dateDiff.days <= 90):
                 sheet.write(row, col -2, obj['amount_total_signed'])
-            elif(dateDiff.days <= 120 and dateDiff.days > 90):
+            elif(dateDiff.days > 90 and dateDiff.days <= 120):
                 sheet.write(row, col -1, obj['amount_total_signed'])
-            elif(dateDiff.days <= 150 and dateDiff.days > 120):
+            elif(dateDiff.days > 120 and dateDiff.days <= 150):
                 sheet.write(row, col, obj['amount_total_signed'])
     
-            print("data date:", dateDiff.days)
+            # print("data date:", dateDiff.days)
 
 
         
