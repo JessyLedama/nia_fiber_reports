@@ -31,13 +31,10 @@ class ProductInvoiceXlsx(models.AbstractModel):
         sheet.write(row, col, 'Product', bold)
 
         col += 1
-        sheet.write(row, col, 'Description', bold)
-
-        col += 1
         sheet.write(row, col, 'Quantity', bold)
 
         col += 1
-        sheet.write(row, col, 'Unit Of Measure', bold) 
+        sheet.write(row, col, 'Currency', bold) 
 
         col += 1
         sheet.write(row, col, 'Unit Price', bold)   
@@ -55,13 +52,12 @@ class ProductInvoiceXlsx(models.AbstractModel):
             if(data['form_data']['start_date'] <= obj['date'] and data['form_data']['end_date'] >= obj['date']):
 
                 if(obj['price_unit'] >= 0):
-                    sheet.write(row, col - 9, obj['move_id'][1])
-                    sheet.write(row, col - 8, obj['date'])
-                    sheet.write(row, col - 7, obj['partner_id'][1])
-                    sheet.write(row, col - 6, obj['name'])
-                    # sheet.write(row, col - 5, obj['invoice_line_ids'][1])
+                    sheet.write(row, col - 8, obj['move_id'][1])
+                    sheet.write(row, col - 7, obj['date'])
+                    sheet.write(row, col - 6, obj['partner_id'][1])
+                    sheet.write(row, col - 5, obj['name'])
                     sheet.write(row, col - 4, obj['quantity'])
-                    # sheet.write(row, col - 3, obj['product_id'])
+                    sheet.write(row, col - 3, obj['currency_id'][1])
                     sheet.write(row, col - 2, obj['price_unit'])
                     sheet.write(row, col - 1, obj['price_total'])
                     sheet.write(row, col, obj['journal_id'][1])
