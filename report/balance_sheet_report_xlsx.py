@@ -20,28 +20,20 @@ class BalanceSheetReportXlsx(models.AbstractModel):
         row = 0
         col = 0
                         
-        sheet.write(row, col, 'Location', bold)
+        sheet.write(row, col, 'Name', bold)
 
         col += 1
-        sheet.write(row, col, 'Product', bold)
+        sheet.write(row, col, 'Debit', bold)
 
         col += 1
-        sheet.write(row, col, 'On Hand Quantity', bold)
+        sheet.write(row, col, 'Credit', bold)
 
         col += 1
-        sheet.write(row, col, 'Unit Of Measure', bold) 
-
-        col += 1
-        sheet.write(row, col, 'Counted Quantity', bold)   
-
-        col += 1
-        sheet.write(row, col, 'Difference', bold)   
-
-        col += 1
-        sheet.write(row, col, 'Date', bold)
+        sheet.write(row, col, 'Balance', bold) 
 
         for obj in data['products']:  
                        
+            name = self.env['financial.report'].search_read([('create_date', '>=', startDate['start_date']), ('create_date', '<=', endDate['end_date'])]) 
             # if(data['start_date'][0]['start_date'] <= obj['create_date'] and data['end_date'][0]['end_date'] >= obj['create_date']):
             
             row += 1 
@@ -52,9 +44,9 @@ class BalanceSheetReportXlsx(models.AbstractModel):
             # sheet.write(row, col - 3, obj['product_uom_id'][1])
             # sheet.write(row, col - 2, obj['inventory_quantity'])
             # sheet.write(row, col - 1, obj['inventory_diff_quantity'])
-            # sheet.write(row, col, obj['create_date'])
+            sheet.write(row, col, obj['id'])
             
-            print("data date:", data['products'])
+            print("data date:", data['target_moves']['target_moves'])
 
 
         

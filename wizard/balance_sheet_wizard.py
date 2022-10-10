@@ -30,6 +30,8 @@ class BalanceSheetReport(models.TransientModel):
     end_date = fields.Date(string='Ending Date', required='1', help='Select eding date')
     total_amount_due = fields.Integer(string='Total Amount Due')
 
+    target_moves = fields.Selection([('posted', 'All Posted Entries'), ('all', 'All Entries')], string="Target Moves", required='1')
+
 
     #PDF Report
     # def check_report(self):
@@ -44,16 +46,18 @@ class BalanceSheetReport(models.TransientModel):
 
     # Excel Report
     def check_excel_report(self):
-        startDate = self.read(['start_date'])[0]['start_date']
-        endDate = self.read(['end_date'])[0]['end_date']
+        startDate = self.read(['start_date'])[0]
+        endDate = self.read(['end_date'])[0]
+        targetMoves = self.read(['target_moves'])[0]
         
-        products = self.env['financial.report'].search_read([('create_date', '>=', startDate), ('create_date', '<=', endDate)]) 
+        products = self.env['financial.report'].search_read([('create_date', '>=', startDate['start_date']), ('create_date', '<=', endDate['end_date'])]) 
 
         data = {
             'products': products,
             'form_data': self.read(['start_date', 'end_date'])[0],
             'start_date': startDate,
-            'end_date': endDate
+            'end_date': endDate,
+            'target_moves':targetMoves,
         }
 
         return self.print_excel_report(data)

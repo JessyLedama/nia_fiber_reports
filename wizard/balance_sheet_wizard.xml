@@ -14,6 +14,12 @@
                     <field name="end_date" />
                   </group>
                 </group>
+
+                <group>
+                  <group>
+                    <field name="target_moves" />
+                  </group>
+                </group>
               
                 <footer>
                     <!-- <button string='Print PDF' name="check_report" type="object" default_focus="1" class="oe_highlight"/> -->
