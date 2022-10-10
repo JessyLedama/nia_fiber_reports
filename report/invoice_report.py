@@ -34,7 +34,7 @@ class ReportInvoices(models.AbstractModel):
         active_model = self.env.context.get('active_model')
         docs = self.env[active_model].browse(self.env.context.get('active_id'))
         outstanding_invoice = []       
-        products = self.env['account.move.line'].search([('create_date', '>=', docs.start_date),('create_date', '<=', docs.end_date), ('journal_id', '<=', 2)])
+        products = self.env['account.move.line'].search([('create_date', '>=', docs.start_date),('create_date', '<=', docs.end_date), ('journal_id', '=', 'Customer Invoices')])
 
         # products = self.env['account.move'].search([('create_date', '>=', docs.start_date),('create_date', '<=', docs.end_date)])
         if products:
