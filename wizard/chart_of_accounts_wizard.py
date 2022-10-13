@@ -26,9 +26,9 @@ class ChartOfAccountsReport(models.TransientModel):
     _name = "chart.of.accounts.report"
     _description = "Chart Of Accounts Report"
 
-    # start_date = fields.Date(string='Starting Date', required='1', help='Select start date')
-    # end_date = fields.Date(string='Ending Date', required='1', help='Select eding date')
-    # total_amount_due = fields.Integer(string='Total Amount Due')
+    start_date = fields.Date(string='Starting Date', required='1', help='Select start date')
+    end_date = fields.Date(string='Ending Date', required='1', help='Select eding date')
+    total_amount_due = fields.Integer(string='Total Amount Due')
 
 
     #PDF Report
